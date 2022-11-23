@@ -1,0 +1,330 @@
+.card-top {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	width: 100%;
+	height: 100%;
+	padding: 28px 30px 30px;
+	background-color: var(--grey-light-clr);
+	border-radius: 10px;
+	background-position: left 0 top 121px;
+	background-size: auto;
+	background-repeat: no-repeat;
+
+	@include mobile {
+		padding: 10px 15px;
+	}
+
+	&--1 {
+		background-image: url('../img/top-1.png');
+
+		@include mobile {
+			padding: 27px 30px;
+			background-size: 354px 212px;
+			background-position: left -49px bottom 16px;
+		}
+	}
+	&--2 {
+		background-image: url('../img/top-2.png');
+
+		@include big-tablet {
+			background-image: url('../img/top-2-1024.png');
+			background-position: 0 127px;
+		}
+
+		@include mobile {
+			background-image: url('../img/top-2.png');
+			background-size: 173px 103px;
+			background-position: left -16px bottom 16px;
+		}
+	}
+	&--3 {
+		background-image: url('../img/top-3.png');
+
+		@include big-tablet {
+			background-size: 448px 296px;
+
+			background-position: 0 127px;
+		}
+
+		@include mobile {
+			background-image: url('../img/top-3.png');
+			background-size: 162px 103px;
+			background-position: left -2px bottom 16px;
+		}
+	}
+	&--4 {
+		background-image: url('../img/top-4.png');
+
+		@include big-tablet {
+			background-image: url('../img/top-4-1024.png');
+			background-position: 0 127px;
+		}
+
+		@include mobile {
+			background-image: url('../img/top-4.png');
+			background-size: 142px 87px;
+			background-position: left 0 bottom 16px;
+
+			.sort {
+				max-width: 73%;
+			}
+		}
+	}
+	&--5 {
+		background-image: url('../img/top-5.png');
+
+		@include big-tablet {
+			background-image: url('../img/top-5-1024.png');
+			background-position: 0 127px;
+		}
+
+		@include mobile {
+			background-image: url('../img/top-5.png');
+			background-size: 140px 104px;
+			background-position: left 0 bottom 16px;
+		}
+	}
+
+	&__list {
+		@include flex-v-center;
+		flex-wrap: wrap;
+	}
+
+	.sort {
+		margin-bottom: 12px;
+
+		@include mobile {
+			// max-width: 73%;
+			margin-bottom: 3px;
+		}
+
+		&__item {
+			@include mr(30px);
+
+			@include mobile {
+				margin: 0;
+				@include mr(21px);
+			}
+		}
+
+		&__link {
+			margin: 0;
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 100%;
+			color: var(--grey-clr);
+
+			@include mobile {
+				font-style: normal;
+				font-weight: 400;
+				font-size: 10px;
+				line-height: 100%;
+			}
+		}
+
+		&__link--main {
+			@include mobile {
+				font-size: 14px;
+			}
+		}
+	}
+
+	.sort--main {
+		@include mobile {
+			width: 100%;
+			margin-bottom: 13px;
+		}
+	}
+
+	&__content {
+		position: relative;
+
+		@include mobile {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			flex-grow: 0;
+			width: 100px;
+		}
+	}
+
+	&__title {
+		margin: 0;
+		margin-bottom: 15px;
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 33px;
+		color: var(--black-clr);
+
+		@include mobile {
+			display: inline;
+			margin-bottom: 0;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 17px;
+		}
+
+		&--main {
+			font-weight: 400;
+			font-size: 24px;
+			line-height: 33px;
+		}
+	}
+
+	&__btn {
+		@include flex-v-center;
+
+		display: none;
+
+		@include mobile {
+			display: inline-flex;
+			align-self: flex-end;
+			color: var(--primary-clr);
+			outline: none;
+			transition: color 0.3s ease-in-out;
+
+			&--main {
+				align-self: center;
+			}
+
+			svg {
+				display: flex;
+				width: 22px;
+				height: 22px;
+				border: 2px solid currentColor;
+				border-radius: 50%;
+				padding: 4px;
+				fill: transparent;
+				background-color: transparent;
+				-o-object-fit: cover;
+				object-fit: cover;
+				transform: translateX(5px);
+				transition: fill 0.3s ease-in-out, background-color 0.3s ease-in-out,
+					border 0.3s ease-in-out;
+
+				.arrow-btn {
+					stroke: currentColor;
+					stroke-width: 2px;
+					stroke-linecap: round;
+					stroke-linejoin: round;
+				}
+			}
+
+			&:focus-visible {
+				svg {
+					color: var(--light-clr);
+					background-color: var(--primary-light-clr);
+					border: 2px solid var(--primary-clr);
+				}
+			}
+
+			&:hover {
+				svg {
+					color: var(--light-clr);
+					background-color: var(--primary-clr);
+					border: 2px solid var(--primary-clr);
+				}
+			}
+
+			&:active {
+				color: var(--primary-shade-clr);
+
+				svg {
+					color: var(--light-clr);
+					background-color: var(--primary-shade-clr);
+					border: 2px solid var(--primary-shade-clr);
+				}
+			}
+		}
+	}
+
+	&__link {
+		@include flex-v-center;
+
+		position: relative;
+		max-width: 112px;
+		margin-top: auto;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 120%;
+		color: var(--primary-clr);
+		outline: none;
+		transition: color 0.3s ease-in-out;
+
+		@include mobile {
+			display: none;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			width: 72%;
+			height: calc(100% + 3px);
+			border-bottom: 2px solid var(--primary-clr);
+			opacity: 0;
+			transition: opacity 0.3s ease-in-out, border-color 0.3s ease-in-out;
+		}
+
+		svg {
+			display: flex;
+			width: 22px;
+			height: 22px;
+			border: 2px solid currentColor;
+			border-radius: 50%;
+			padding: 4px;
+			fill: transparent;
+			background-color: transparent;
+			-o-object-fit: cover;
+			object-fit: cover;
+			transform: translateX(5px);
+			transition: fill 0.3s ease-in-out, background-color 0.3s ease-in-out,
+				border 0.3s ease-in-out;
+
+			.arrow-btn {
+				stroke: currentColor;
+				stroke-width: 2px;
+				stroke-linecap: round;
+				stroke-linejoin: round;
+			}
+		}
+
+		&:focus-visible {
+			svg {
+				color: var(--light-clr);
+				background-color: var(--primary-light-clr);
+				border: 2px solid var(--primary-clr);
+			}
+		}
+
+		&:hover {
+			svg {
+				color: var(--light-clr);
+				background-color: var(--primary-clr);
+				border: 2px solid var(--primary-clr);
+			}
+		}
+
+		&:hover::before {
+			opacity: 1;
+		}
+
+		&:active {
+			color: var(--primary-shade-clr);
+
+			svg {
+				color: var(--light-clr);
+				background-color: var(--primary-shade-clr);
+				border: 2px solid var(--primary-shade-clr);
+			}
+		}
+
+		&:active::before {
+			border-bottom: 2px solid var(--primary-shade-clr);
+		}
+	}
+}

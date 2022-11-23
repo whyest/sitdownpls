@@ -1,0 +1,97 @@
+.special-offers {
+	position: relative;
+	padding-top: var(--section-gap);
+	background-color: var(--light-clr);
+
+	&__top {
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+
+		@include mobile {
+			display: block;
+		}
+	}
+
+	// Align the bottom of cards
+	// .swiper-wrapper > &__item {
+	// 	height: unset;
+	// }
+
+	&__slider {
+		position: relative;
+		outline-offset: -3px;
+		width: 100%;
+		min-height: 511px;
+		padding: 0 4px;
+		padding-bottom: 10px;
+		overflow: hidden;
+
+		@include small-desktop {
+			padding: 0;
+			outline-offset: none;
+		}
+
+		@include mobile {
+			padding-bottom: 47px;
+		}
+
+		&-nav {
+			@include mobile {
+				position: absolute;
+				bottom: -26px;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+		}
+	}
+
+	&__list {
+		@include mr(var(--gap));
+		display: flex;
+	}
+
+	&__item {
+		width: 23.125%;
+
+		@include small-desktop {
+			width: 100%;
+			max-width: 31.125%;
+		}
+
+		@include tablet {
+			max-width: 50%;
+		}
+
+		@include small-tablet {
+			max-width: 48%;
+		}
+		@include big-mobile {
+			max-width: 100%;
+		}
+
+		.card {
+			height: 100%;
+		}
+
+		&--large {
+			width: 48.75%;
+
+			@include small-desktop {
+				width: 100%;
+				max-width: 31.125%;
+			}
+
+			@include tablet {
+				max-width: 50%;
+			}
+
+			@include small-tablet {
+				max-width: 48%;
+			}
+			@include big-mobile {
+				max-width: 100%;
+			}
+		}
+	}
+}

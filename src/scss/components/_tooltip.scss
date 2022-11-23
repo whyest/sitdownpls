@@ -1,0 +1,51 @@
+.tooltip {
+	display: inline-block;
+	transform: translateY(2px);
+
+	&__btn {
+		@include flex-all-center;
+
+		svg {
+			width: 14px;
+			height: 14px;
+			fill: var(--secondary-clr);
+		}
+
+		&:focus {
+			+ .tooltip__txt {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+
+		@include hover {
+			+ .tooltip__txt {
+				opacity: 1;
+				visibility: visible;
+			}
+
+			svg {
+				fill: white;
+				background-color: var(--secondary-clr);
+				border-radius: 100%;
+				transition: fill 0.3s ease-in-out, background-color 0.3s ease-in-out;
+			}
+		}
+	}
+
+	&__txt {
+		width: 157px;
+		height: 52px;
+		padding: 5px 5px;
+		box-shadow: 0 2px 8px rgba(20, 16, 36, 0.1);
+		font-weight: 400;
+		font-size: 9px;
+		line-height: 14px;
+		text-align: center;
+		color: var(--light-clr);
+		background-color: var(--black-clr);
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+	}
+}

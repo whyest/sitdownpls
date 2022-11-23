@@ -1,0 +1,36 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+	// base
+	--font-family: 'Open Sans', sans-serif;
+	--content-width: 1280px;
+	--container-offset: 15px;
+	--container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+	// grid gap
+	--section-gap: 70px;
+	--gap: 32px;
+
+	// colors
+	--light-clr: #fff;
+	--primary-clr: #a65cf0;
+	--primary-light-clr: #c998fb;
+	--primary-shade-clr: #7033ac;
+	--pink-light-clr: #f8efff;
+	--pink-violet-clr: #ebd1ff;
+	--secondary-clr: #ff862f;
+	--secondary-light-clr: #ffbd59;
+	--secondary-shade-clr: #bb370e;
+	--red-input-clr: #ff6972;
+	--green-input-clr: #b8ec64;
+	--gold-clr: #d5b986;
+	--grey-light-clr: #f7f7f7;
+	--grey-bg-clr: #f6f6f6;
+	--md-grey-clr: #eaeaea;
+	--grey-clr: #999;
+	--grey-shade-clr: #666;
+	--black-clr: #333;
+	--background-clr: rgba(#000, 0.2);
+	--lime-clr: #daffd1;
+	--bone-clr: #fff5d1;
+}

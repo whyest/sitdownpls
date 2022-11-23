@@ -1,0 +1,137 @@
+.hero {
+	// background-color: #f2f3fb;
+
+	&__slider {
+		position: relative;
+		min-height: 400px;
+		width: 100%;
+		overflow: hidden;
+
+		@include mobile {
+			min-height: 242px;
+		}
+	}
+
+	&__container {
+		padding-top: 80px;
+		padding-bottom: 80px;
+
+		@include mobile {
+			padding-top: 30px;
+		}
+	}
+
+	&__slide {
+		display: block;
+		height: 100%;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-color: var(--color-gray);
+
+		&--1 {
+			background-image: url('../img/hero-bg-1.jpg');
+
+			@include mobile {
+				background-image: url('../img/hero-bg-1-320.jpg');
+			}
+		}
+		&--2 {
+			background-image: url('../img/hero-bg-2.jpg');
+
+			@include mobile {
+				background-image: url('../img/hero-bg-2-320.jpg');
+			}
+		}
+		&--3 {
+			background-image: url('../img/hero-bg-3.jpg');
+
+			@include mobile {
+				height: 210px;
+				background-image: url('../img/hero-bg-3-320.jpg');
+			}
+		}
+	}
+
+	&__content {
+		max-width: 551px;
+		padding-left: 15px;
+
+		@include big-tablet {
+			padding-left: 0;
+		}
+
+		@include mobile {
+			padding-left: 18px;
+		}
+
+		.main-title {
+			margin: 0;
+			margin-bottom: 49px;
+			font-weight: 700;
+			font-size: 48px;
+			line-height: 65px;
+			color: var(--grey-clr);
+
+			@include mobile {
+				margin-bottom: 46px;
+				max-width: 204px;
+				font-weight: 700;
+				font-size: 20px;
+				line-height: 27px;
+			}
+
+			&--light {
+				color: var(--light-clr);
+			}
+		}
+	}
+
+	&__pag {
+		@include flex;
+
+		.swiper-pagination-bullet {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			border-radius: 50%;
+			width: 15px;
+			height: 15px;
+			text-align: center;
+			background-color: var(--black-clr);
+
+			@include mobile {
+				width: 6px;
+				height: 6px;
+			}
+		}
+	}
+
+	.swiper-pagination-bullets {
+		display: flex;
+		justify-content: space-between;
+		width: 83px;
+		bottom: 23px;
+		left: 50%;
+		transform: translateX(-50%);
+
+		@include mobile {
+			bottom: 42px;
+			width: 42px;
+		}
+	}
+
+	&__btn {
+		@include mobile {
+			display: none;
+		}
+
+		&--mobile {
+			display: none;
+			@include mobile {
+				display: block;
+				width: 92.5%;
+			}
+		}
+	}
+}

@@ -1,0 +1,170 @@
+.high-rating {
+	padding-top: 59px;
+	padding-bottom: var(--section-gap);
+
+	@include big-tablet {
+		padding-top: var(--section-gap);
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		grid-template-rows: repeat(2, minmax(320px, 1fr));
+		grid-auto-rows: minmax(320px, 1fr);
+		gap: var(--gap);
+
+		@include tablet {
+			grid-template-columns: repeat(6, 1fr);
+		}
+
+		@include mobile {
+			grid-template-rows: repeat(2, minmax(278px, 1fr));
+			grid-auto-rows: minmax(278px, 1fr);
+			gap: 16px;
+		}
+	}
+
+	&__item {
+		grid-column: 3 span;
+
+		// Show more feature
+		&:nth-child(n + 9) {
+			display: none;
+		}
+		&.is-visible {
+			display: block;
+		}
+
+		@include small-desktop {
+			grid-column: 4 span;
+
+			&:nth-child(n + 7) {
+				display: none;
+			}
+			&.is-visible {
+				display: block;
+			}
+		}
+		@include tablet {
+			grid-column: 3 span;
+		}
+	}
+
+	.card {
+		min-height: 420px;
+		padding: 30px 15px;
+		-webkit-filter: unset;
+		filter: unset;
+
+		@include mobile {
+			min-height: 278px;
+			min-width: 139px;
+			padding-bottom: 15px;
+		}
+
+		&__img-wrapper {
+			height: 164px;
+
+			@include big-tablet {
+				height: 165px;
+				margin-bottom: 13px;
+			}
+
+			@include mid-mobile {
+				height: 135px;
+				margin-bottom: 18px;
+			}
+
+			@include mobile {
+				height: 59px;
+			}
+		}
+
+		&__content {
+			padding: 0 15px;
+
+			@include mobile {
+				height: 100px;
+				padding: 0;
+			}
+		}
+
+		&__title {
+			width: 100%;
+
+			&--2 {
+				@include mobile {
+					word-break: break-word;
+				}
+			}
+
+			@include big-mobile {
+				width: 76%;
+				margin-bottom: 16px;
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 130%;
+			}
+		}
+
+		&__price-wrapper {
+			margin-bottom: 0;
+		}
+
+		&__price {
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 130%;
+			color: var(--grey-shade-clr);
+		}
+
+		&__star {
+			top: 30px;
+			left: 30px;
+			margin: 0;
+			padding-left: 22px;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 130%;
+			color: var(--secondary-clr);
+			background-image: url('../img/star.svg');
+			background-position: left center;
+			background-size: 15px 15px;
+			background-repeat: no-repeat;
+
+			@include mobile {
+				top: 16px;
+				left: 15px;
+				padding-left: 20px;
+				font-weight: 400;
+				font-size: 12px;
+				line-height: 130%;
+				background-size: 13px 13px;
+			}
+		}
+
+		&__btn {
+			@include mobile {
+				padding: 11px 24px;
+			}
+		}
+	}
+
+	&__img-container {
+		height: 100px;
+	}
+
+	&__btn {
+		margin-top: var(--gap);
+		padding: 20px 35px;
+
+		@include mobile {
+			padding: 20px 34px;
+		}
+	}
+}
+
+// Align the bottom of cards
+// .swiper-wrapper > .high-rating__item {
+// 	height: unset;
+// }

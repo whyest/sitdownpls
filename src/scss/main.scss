@@ -1,0 +1,34 @@
+// базовые подключения
+@import 'vars';
+@import 'mixins';
+@import 'fonts';
+@import 'settings';
+
+// подключения компонентов страницы (маленькие компоненты)
+@import './components/phone';
+@import './components/search';
+@import './components/city-filter';
+@import './components/category-filter';
+@import './components/section-title';
+@import './components/btn';
+@import './components/card';
+@import './components/card-top';
+@import './components/useful-card';
+@import './components/tooltip';
+@import './components/contacts-form';
+@import './components/social';
+@import './components/footer-nav';
+
+// подключения компонентов страницы (большие компоненты)
+@import './components/header';
+@import './components/nav';
+@import './components/burger';
+@import './components/hero';
+@import './components/special-offers';
+@import './components/slider-nav';
+@import './components/high-rating';
+@import './components/oxford';
+@import './components/top';
+@import './components/useful';
+@import './components/contacts';
+@import './components/footer';

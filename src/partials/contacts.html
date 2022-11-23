@@ -1,0 +1,56 @@
+<section class="contacts">
+  <div class="container contacts__container">
+    <div class="contacts__content">
+      <div class="contacts__left">
+        <h2 class="section-title contacts__title">Мы&nbsp;всегда вам рады!</h2>
+        <p class="contacts__descr">Безусловно, новая модель организационной деятельности в&nbsp;значительной степени
+          обусловливает важность распределения
+          внутренних резервов и&nbsp;ресурсов.
+          <span class="tooltip">
+            <button class="btn-reset tooltip__btn" aria-describedby="id1">
+              <svg class="">
+                <use class="icon" xlink:href="img/sprite.svg#tooltip-icon"></use>
+              </svg>
+            </button>
+            <span class="tooltip__txt" role="tooltip" id="id1">
+              <span class="visually-hidden">Тултип: </span>
+              Реплицированные с зарубежных источников, исследования формируют глобальную сеть.
+            </span>
+          </span>
+        </p>
+        <form class="contacts__form form">
+          <label class="form__label">
+            <input type="text" name="name" placeholder="Как вас зовут?" class="form__input form__input--name">
+          </label>
+          <label class="form__label">
+            <input type="tel" name="phone" placeholder="Ваш телефон" class="form__input form__input--phone">
+          </label>
+          <label class="form__label">
+            <input type="email" name="email" placeholder="Ваш e-mail"
+              class="form__input form__input--last form__input--email">
+          </label>
+          <div class="left">
+            <button class="btn-reset form__btn btn btn--fill" type="submit">Отправить</button>
+          </div>
+          <label class="checkbox-wrap form__checkbox">
+            <input class="checkbox visually-hidden" type="checkbox" name="check-one" checked>
+            <span class="checkbox-content">
+              <span class="visual-check"></span>
+              <span class="check-text">Принимаю <a href="#" class="check-link">пользовательское
+                  соглашение</a></span>
+            </span>
+          </label>
+        </form>
+      </div>
+      <div class="contacts__background">
+        <picture>
+          <source srcset="img/contacts-bg-768.png" media="(max-width: 768px)" width="187" hight="444">
+          <source srcset="img/contacts-bg.avif" type="image/avif">
+          <source srcset="img/contacts-bg.webp" type="image/webp">
+          <img loading="lazy" src="img/contacts-bg.png" class="image" width="624" height="383"
+            alt="Картинка комнаты с мебелью">
+        </picture>
+      </div>
+    </div>
+  </div>
+</section>

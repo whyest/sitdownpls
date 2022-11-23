@@ -1,0 +1,44 @@
+.useful-card {
+	@include flex;
+	flex-direction: column;
+	min-height: 676px;
+
+	@include big-tablet {
+		min-height: 456px;
+	}
+
+	&__content {
+		@include flex;
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 30px;
+		flex-grow: 1;
+	}
+
+	&__descr {
+		margin: 0;
+		margin-bottom: 15px;
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 33px;
+		color: var(--black-clr);
+
+		@include big-tablet {
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 22px;
+		}
+	}
+
+	&__img {
+		margin-bottom: -3px;
+	}
+
+	&__btn {
+		margin-top: auto;
+		padding: 18px 34px;
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 100%;
+	}
+}

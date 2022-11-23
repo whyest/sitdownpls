@@ -1,0 +1,94 @@
+.oxford {
+	position: relative;
+	background-image: url('../img/oxford-bg.jpg');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: var(--grey-shade-clr);
+
+	@include big-tablet {
+		background-image: url('../img/oxford-bg-1024.jpg');
+	}
+
+	@include small-tablet {
+		background-image: url('../img/oxford-bg-768.jpg');
+	}
+
+	@include mobile {
+		margin-bottom: 92px;
+		background-image: url('../img/oxford-bg-320.jpg');
+	}
+
+	&__container {
+		@include small-tablet {
+			padding: 0 calc(var(--container-offset) - 36px);
+		}
+
+		@include mid-mobile {
+			padding: 0 var(--container-offset);
+		}
+	}
+
+	&__content {
+		@include flex-h-center;
+		flex-direction: column;
+		align-items: flex-start;
+		min-height: 600px;
+		padding-top: 50px;
+		padding-bottom: 50px;
+
+		@include mobile {
+			justify-content: flex-start;
+			max-width: 200px;
+			min-height: 210px;
+			padding-top: 32px;
+			padding-bottom: 30px;
+		}
+	}
+
+	&__title {
+		margin: 0;
+		margin-bottom: 49px;
+		max-width: 500px;
+		font-weight: 400;
+		font-size: 48px;
+		line-height: 120%;
+		color: var(--light-clr);
+
+		@include mobile {
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 120%;
+		}
+	}
+
+	&__big-title {
+		font-family: 'Playfair';
+		font-style: normal;
+		font-weight: 900;
+		font-size: 60px;
+		line-height: 120%;
+		color: var(--gold-clr);
+
+		@include mobile {
+			font-weight: 700;
+			font-size: 24px;
+			line-height: 120%;
+		}
+	}
+
+	&__btn {
+		padding: 20px 30px;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 100%;
+
+		@include mobile {
+			position: absolute;
+			left: 50%;
+			bottom: -92px;
+			min-width: 92.5%;
+			transform: translateX(-50%);
+		}
+	}
+}
